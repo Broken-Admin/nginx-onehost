@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  netcat_server:
+    build:
+      context: .
+    ports:
+      - "8090:8080"
