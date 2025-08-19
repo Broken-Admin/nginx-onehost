@@ -4,10 +4,10 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - nc_gold
-      - nc_silver
-      - nc_copper
-      - nc_local
+      - gold
+      - silver
+      - copper
+      - local
 
   local:
     build: ./server
