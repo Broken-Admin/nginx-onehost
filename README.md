@@ -1,6 +1,6 @@
 ## Project Outline
 
-- /
+### /
 The root of this project contains a `Dockerfile`, `docker-compose.yml` and, `nginx.conf`
 
 The `Dockerfile` provides a very simple setup for a custom `nginx` system.
@@ -11,7 +11,7 @@ Configuration is to have multiple services hosted on 1 machine, with multiple po
 
 The `docker-compose.yml` utilizes Docker's advanced compose feature to spin up multiple containers that can be referenced within the `nginx.conf`. This allows for a simple demonstration of how the service would function.
 
-- /server 
+### /server 
 The `/server` directory of this project contains a `Dockerfile`, `docker-compose.yml`, and executable `run.sh`
 
 The `Dockerfile` provides a simple `nc` based port listener by executing the `run.sh` script that simply calls netcat to echo some simulated information out to the user for testing.
