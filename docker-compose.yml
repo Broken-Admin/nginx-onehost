@@ -11,20 +11,12 @@ services:
 
   nc_local:
     build: ./server
-    ports:
-        - "8081:8080"
 
   nc_gold:
     build: ./server  
-    ports:
-        - "8080:8080"
 
   nc_silver:
     build: ./server  
-    ports:
-      - "8085:8080"
 
   nc_copper:
     build: ./server  
-    ports:
-      - "8090:8080"
