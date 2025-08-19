@@ -1,5 +1,8 @@
 ## Project Outline
 
+### NGINX Documentation
+See [here](https://nginx.org/en/docs/http/server_names.html) for official NGINX documentation regarding server names.
+
 ### `/`
 The root of this project contains a `Dockerfile`, `docker-compose.yml` and, `nginx.conf`
 
