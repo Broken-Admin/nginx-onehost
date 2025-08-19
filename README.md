@@ -1,6 +1,6 @@
 ## Project Outline
 
-### /
+### `/`
 The root of this project contains a `Dockerfile`, `docker-compose.yml` and, `nginx.conf`
 
 The `Dockerfile` provides a very simple setup for a custom `nginx` system.
@@ -11,12 +11,14 @@ Configuration is to have multiple services hosted on 1 machine, with multiple po
 
 The `docker-compose.yml` utilizes Docker's advanced compose feature to spin up multiple containers that can be referenced within the `nginx.conf`. This allows for a simple demonstration of how the service would function.
 
-### /server 
-The `/server` directory of this project contains a `Dockerfile`, `docker-compose.yml`, and executable `run.sh`
+### `/server` 
+The `/server` directory of this project contains a `Dockerfile`, `docker-compose.yml`, and executable `server.py`
 
-The `Dockerfile` provides a simple `nc` based port listener by executing the `run.sh` script that simply calls netcat to echo some simulated information out to the user for testing.
+The `Dockerfile` provides a simple `python3` based port listener by executing the `server.py` script that provides "Hello, world!" as output to the user for testing.
 
 The `docker-compose.yml` file provides a way to test a single instance of the `server` listener at once.
+
+The `server.py` script provides a very simple HTTP server utilizing Python's built-in http.server module.
 
 ## Running the project
 
@@ -33,12 +35,17 @@ In order to run the project, simply navigate to the root of the project on a Doc
 It is then possible to run the following commands, and watch the output of the terminal you ran `docker compose` in.
 ```bash
 curl localhost
-# ^C
+# - Hello, world!
+# docker compose shows logs from local
 curl gold-server.local
-# ^C
+# - Hello, world!
+# docker compose shows logs from gold
 curl silver-lining.local
-# ^C
+# - Hello, world!
+# docker compose shows logs from silver
 curl cupric.local
+# - Hello, world!
+# docker compose shows logs from copper
 ```
 
 ## Contributions

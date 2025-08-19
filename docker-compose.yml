@@ -9,14 +9,14 @@ services:
       - nc_copper
       - nc_local
 
-  nc_local:
+  local:
     build: ./server
 
-  nc_gold:
+  gold:
     build: ./server  
 
-  nc_silver:
+  silver:
     build: ./server  
 
-  nc_copper:
+  copper:
     build: ./server  
